@@ -2,7 +2,7 @@ fn manufacture(gifs: Vec<&str>, materials: String) -> Vec<&str> {
   let mut possible_gifs: Vec<&str> = vec![];
 
   for gif in gifs {
-    let can_created_gif = gif.chars().all(|gif_char| {
+    let can_create_gif = gif.chars().all(|gif_char| {
       let exists_material = materials.chars().any(|material| gif_char == material);
       if exists_material {
         return exists_material;
@@ -10,7 +10,7 @@ fn manufacture(gifs: Vec<&str>, materials: String) -> Vec<&str> {
       exists_material
     });
 
-    if can_created_gif {
+    if can_create_gif {
       possible_gifs.push(gif);
     }
   }
